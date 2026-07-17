@@ -1,7 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-bsd26_michaela_hofer,at.campus02.bsd,Liquid,0,33,0,0,0,14,0,7,0,7
-bsd26_michaela_hofer,at.campus02.bsd,Drink,0,13,0,0,0,6,0,3,0,3
-bsd26_michaela_hofer,at.campus02.bsd,DrinkQueue,0,83,0,10,0,25,0,11,0,6
-bsd26_michaela_hofer,at.campus02.bsd,StringQueue,0,83,0,10,0,25,0,11,0,6
-bsd26_michaela_hofer,at.campus02.bsd,Cocktail,0,9,0,0,0,4,0,1,0,1
-bsd26_michaela_hofer,at.campus02.bsd,SimpleDrink,0,25,0,2,0,8,0,5,0,4

@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"at.campus02.bsd","l":"CocktailTest"},{"p":"at.campus02.bsd","l":"DrinkQueueTest"},{"p":"at.campus02.bsd","l":"DrinkTest"},{"p":"at.campus02.bsd","l":"LiquidTest"},{"p":"at.campus02.bsd","l":"SimpleDrinkTest"},{"p":"at.campus02.bsd","l":"StringQueueTest"}];updateSearchResults();
