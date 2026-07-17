@@ -3,8 +3,6 @@
 ## Installation
 Um das Programm auszuführen, müssen Sie die entsprechenden Dateien in Ihre Entwicklungsumgebung einbinden (beispielsweise [IntelliJ](https://www.jetbrains.com/idea/)).
 
-## Anleitung zur Verwendung
-
 ## Autoren
 Das Programm wurde von Marleen Felber und Michaela Hofer _im Rahmen des Studiums_ erstellt.
 
