@@ -24,8 +24,8 @@ Das Programm wurde von Marleen Felber und Michaela Hofer _im Rahmen des Studiums
 - [x] Branch queue erstellen
 - [x] Klasse erstellen, die Getränke in Queue verwaltet
 - [x] Branch javadoc erstellen
-- [ ] JavaDoc Kommentare erstellen
-- [ ] Branch tests erstellen
-- [ ] Tests für Klassen erstellen
-- [ ] Branch maven_site erstellen
-- [ ] maven site Dokumentation erstellen
+- [x] JavaDoc Kommentare erstellen
+- [x] Branch tests erstellen
+- [x] Tests für Klassen erstellen
+- [x] Branch maven_site erstellen
+- [x] maven site Dokumentation erstellen
