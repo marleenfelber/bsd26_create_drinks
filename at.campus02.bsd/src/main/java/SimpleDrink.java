@@ -3,9 +3,6 @@
  * drinks
  */
 public class SimpleDrink extends Drink {
-    /**
-     * uses only one liquid
-     */
     protected Liquid l;
 
     /**
