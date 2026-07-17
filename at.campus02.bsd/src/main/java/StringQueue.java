@@ -19,7 +19,7 @@ public class StringQueue implements IQueue {
 
     @Override
     public boolean offer(String obj) {
-        if (elements.size() != maxSize) {
+        if (elements.size() < maxSize) {
             elements.add(obj);
         } else {
             return false;
@@ -41,8 +41,7 @@ public class StringQueue implements IQueue {
 
     @Override
     public String remove() {
-        // String element = poll();
-        element = "";
+        String element = poll();
 
         if (element == null) {
             throw new NoSuchElementException("There's no element anymore.");
@@ -69,7 +68,7 @@ public class StringQueue implements IQueue {
         String element = peek();
 
         if (element == null) {
-            throw new NoSuchElementException("there's no element any more");
+            throw new NoSuchElementException("There's no element anymore.");
         }
 
         return element;
