@@ -10,12 +10,30 @@ public class DrinkQueue {
         maxSize = size;
     }
 
-    // offer
-    // poll
-    // remove
-
-    public Drink peek()git  {
+    public Drink peek()git {
         Drink element;
+
+        if (elements.size() > 0) {
+            element = elements.get(0);
+        } else {
+            element = null;
+        }
+
+        return element;
+    }
+
+    public boolean offer(Drink obj) {
+        if (elements.size() != maxSize) {
+            elements.add(obj);
+        } else {
+            return false;
+        }
+
+        return true;
+    }
+
+    public Drink poll() {
+        Drink element = peek();
 
         if (elements.size() > 0) {
             element = elements.get(0);
@@ -28,6 +46,17 @@ public class DrinkQueue {
 
     public Drink element() {
         Drink element = peek();
+
+        if (element == null) {
+            throw new NoSuchElementException("There's no element anymore.");
+        }
+
+        return element;
+    }
+
+    public Drink remove() {
+        // Drink element = poll();
+        element = "";
 
         if (element == null) {
             throw new NoSuchElementException("There's no element anymore.");
