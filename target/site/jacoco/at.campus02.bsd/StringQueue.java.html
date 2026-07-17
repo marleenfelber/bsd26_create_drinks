@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringQueue.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bsd26_michaela_hofer</a> &gt; <a href="index.source.html" class="el_package">at.campus02.bsd</a> &gt; <span class="el_source">StringQueue.java</span></div><h1>StringQueue.java</h1><pre class="source lang-java linenums">package at.campus02.bsd;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+/**
+ * Implementation of the at.campus02.bsd.IQueue Interface that represents a queue that stores String Objects
+ */
+public class StringQueue implements IQueue {
+<span class="fc" id="L11">    private List&lt;String&gt; elements = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L12">    private int maxSize = 5;</span>
+
+    /**
+     * Constructor of a at.campus02.bsd.StringQueue witht the maximum size
+     *
+     * @param size amount of Strings that can be inside of the queue
+     */
+<span class="fc" id="L19">    public StringQueue(int size) {</span>
+<span class="fc" id="L20">        maxSize = size;</span>
+<span class="fc" id="L21">    }</span>
+
+    /**
+     * adds a new Object to the end of the queue
+     *
+     * @param obj the new object that should be included in the queue
+     * @return true if the element was successfully added, false if not
+     */
+    @Override
+    public boolean offer(String obj) {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (elements.size() &lt; maxSize) {</span>
+<span class="fc" id="L32">            elements.add(obj);</span>
+        } else {
+<span class="fc" id="L34">            return false;</span>
+        }
+
+<span class="fc" id="L37">        return true;</span>
+    }
+
+    /**
+     * removes and returns the first element in the queue
+     *
+     * @return first element of the queue, null if queue is empty
+     */
+    @Override
+    public String poll() {
+<span class="fc" id="L47">        String element = peek();</span>
+
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (elements.size() != 0) {</span>
+<span class="fc" id="L50">            elements.remove(0);</span>
+        }
+
+<span class="fc" id="L53">        return element;</span>
+    }
+
+    /**
+     * removes and returns the first element in the queue (same als poll)
+     *
+     * @return first element
+     * @throws NoSuchElementException if the queue is empty
+     */
+    @Override
+    public String remove() {
+<span class="fc" id="L64">        String element = poll();</span>
+
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (element == null) {</span>
+<span class="fc" id="L67">            throw new NoSuchElementException(&quot;There's no element anymore.&quot;);</span>
+        }
+
+<span class="fc" id="L70">        return element;</span>
+    }
+
+    /**
+     * returns the first element without deleting it
+     *
+     * @return first element of the queue, null if no elements exist
+     */
+    @Override
+    public String peek() {
+        String element;
+
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (elements.size() &gt; 0) {</span>
+<span class="fc" id="L83">            element = elements.get(0);</span>
+        } else {
+<span class="fc" id="L85">            element = null;</span>
+        }
+
+<span class="fc" id="L88">        return element;</span>
+    }
+
+    /**
+     * returns the first element without deleting it (same as peek)
+     *
+     * @return first element
+     * @throws NoSuchElementException if the queue is empty
+     */
+    @Override // Used or not?
+    public String element() {
+<span class="fc" id="L99">        String element = peek();</span>
+
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        if (element == null) {</span>
+<span class="fc" id="L102">            throw new NoSuchElementException(&quot;There's no element anymore.&quot;);</span>
+        }
+
+<span class="fc" id="L105">        return element;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

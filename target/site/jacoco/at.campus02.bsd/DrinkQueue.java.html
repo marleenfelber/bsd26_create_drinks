@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DrinkQueue.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bsd26_michaela_hofer</a> &gt; <a href="index.source.html" class="el_package">at.campus02.bsd</a> &gt; <span class="el_source">DrinkQueue.java</span></div><h1>DrinkQueue.java</h1><pre class="source lang-java linenums">package at.campus02.bsd;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+/**
+ * Class that represents a queue that stores at.campus02.bsd.Drink Objects
+ */
+public class DrinkQueue {
+<span class="fc" id="L11">    private List&lt;Drink&gt; elements = new ArrayList&lt;Drink&gt;();</span>
+<span class="fc" id="L12">    private int maxSize = 5;</span>
+
+<span class="fc" id="L14">    public DrinkQueue(int size) {</span>
+<span class="fc" id="L15">        maxSize = size;</span>
+<span class="fc" id="L16">    }</span>
+
+    /**
+     * returns the first drink without deleting it
+     *
+     * @return first drink of the queue, null if no drink exist
+     */
+    public Drink peek() {
+        Drink element;
+
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (elements.size() &gt; 0) {</span>
+<span class="fc" id="L27">            element = elements.get(0);</span>
+        } else {
+<span class="fc" id="L29">            element = null;</span>
+        }
+
+<span class="fc" id="L32">        return element;</span>
+    }
+
+    /**
+     * adds a new at.campus02.bsd.Drink to the end of the queue
+     *
+     * @param obj the new drink that should be included in the queue
+     * @return true if the drink was successfully added, false if not
+     */
+    public boolean offer(Drink obj) {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (elements.size() &lt; maxSize) {</span>
+<span class="fc" id="L43">            elements.add(obj);</span>
+        } else {
+<span class="fc" id="L45">            return false;</span>
+        }
+
+<span class="fc" id="L48">        return true;</span>
+    }
+
+    /**
+     * removes and returns the first drink in the queue
+     *
+     * @return first drink of the queue, null if queue is empty
+     */
+    public Drink poll() {
+<span class="fc" id="L57">        Drink element = peek();</span>
+
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (elements.size() &gt; 0) {</span>
+<span class="fc" id="L60">            elements.remove(0);</span>
+        }
+
+<span class="fc" id="L63">        return element;</span>
+    }
+
+    /**
+     * returns the first drink without deleting it (same as peek)
+     *
+     * @return first drink
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public Drink element() {
+<span class="fc" id="L73">        Drink element = peek();</span>
+
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (element == null) {</span>
+<span class="fc" id="L76">            throw new NoSuchElementException(&quot;There's no element anymore.&quot;);</span>
+        }
+
+<span class="fc" id="L79">        return element;</span>
+    }
+
+    /**
+     * removes and returns the first drink in the queue (same als poll)
+     *
+     * @return first drink
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public Drink remove() {
+<span class="fc" id="L89">        Drink element = poll();</span>
+
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        if (element == null) {</span>
+<span class="fc" id="L92">            throw new NoSuchElementException(&quot;There's no element anymore.&quot;);</span>
+        }
+
+<span class="fc" id="L95">        return element;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
