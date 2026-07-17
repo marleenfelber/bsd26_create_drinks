@@ -15,13 +15,12 @@ public class DrinkQueue {
         maxSize = size;
     }
 
-
     /**
      * returns the first drink without deleting it
      *
      * @return first drink of the queue, null if no drink exist
      */
-    public Drink peek(){
+    public Drink peek() {
         Drink element;
 
         if (elements.size() > 0) {
@@ -40,7 +39,7 @@ public class DrinkQueue {
      * @return true if the drink was successfully added, false if not
      */
     public boolean offer(Drink obj) {
-        if (elements.size() != maxSize) {
+        if (elements.size() < maxSize) {
             elements.add(obj);
         } else {
             return false;
@@ -58,9 +57,7 @@ public class DrinkQueue {
         Drink element = peek();
 
         if (elements.size() > 0) {
-            element = elements.get(0);
-        } else {
-            element = null;
+            elements.remove(0);
         }
 
         return element;
