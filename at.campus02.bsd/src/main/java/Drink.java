@@ -2,16 +2,12 @@
  * Abstract base class for concrete drink classes
  */
 public abstract class Drink {
-    /**
-     * name of the drink
-     */
     protected String name;
 
     /**
      * Creates a Drink object with given name
      *
      * @param name name of the drink
-     *
      */
     public Drink(String name) {
         this.name = name;

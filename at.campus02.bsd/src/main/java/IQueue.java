@@ -1,29 +1,43 @@
-
+/**
+ * Interface that represents a queue that stores String Objects
+ */
 public interface IQueue {
+
     /**
-     * I am a really bad comment
-     * <p>
-     * fasdfadsffdsadsf
-     * <p>
-     * fdsasdfadsf
-     * <p>
-     * add object to queue, true if okay
-     * <p>
-     * i fell asleep on my keyboard...
+     * adds a new Object to the end of the queue
      *
-     *
+     * @param obj the new object that should be included in the queue
+     * @return true if the element was successfully added, false if not
      */
     public abstract boolean offer(String obj);
 
-    // returns + del 1st element; null if nothing in there
+    /**
+     * removes and returns the first element in the queue
+     *
+     * @return first element of the queue, null if queue is empty
+     */
     public abstract String poll();
 
-    // same as poll, if there is nothing in there error NoSuchElementException
+    /**
+     * removes and returns the first element in the queue (same als poll)
+     *
+     * @return first element
+     * @throws NoSuchElementException if the queue is empty
+     */
     public abstract String remove();
 
-    // 1st element without dlete, otherwise null
+    /**
+     * returns the first element without deleting it
+     *
+     * @return first element of the queue, null if no elements exist
+     */
     public abstract String peek();
 
-    // element is to peek what remove is to poll
+    /**
+     * returns the first element without deleting it (same as peek)
+     *
+     * @return first element
+     * @throws NoSuchElementException if the queue is empty
+     */
     public abstract String element();
 }
