@@ -1,24 +1,29 @@
 
 public interface IQueue {
-  /** 
-   *
-   * */ 
-  public abstract boolean offer(String obj);
+    /**
+     * I am a really bad comment
+     * <p>
+     * fasdfadsffdsadsf
+     * <p>
+     * fdsasdfadsf
+     * <p>
+     * add object to queue, true if okay
+     * <p>
+     * i fell asleep on my keyboard...
+     *
+     *
+     */
+    public abstract boolean offer(String obj);
 
-  //returns + del 1st element; null if nothing in there
-   //
-  public abstract String poll();
+    // returns + del 1st element; null if nothing in there
+    public abstract String poll();
 
-  /* 
-  same as poll, if there is nothing in there error NoSuchElementException
-   */
-  public abstract String remove();
+    // same as poll, if there is nothing in there error NoSuchElementException
+    public abstract String remove();
 
-  // 1st element without delete, otherwise null
-   
-  public abstract String peek();
+    // 1st element without dlete, otherwise null
+    public abstract String peek();
 
-  // element is to peek what remove is to poll
-  
-  public abstract String element();
+    // element is to peek what remove is to poll
+    public abstract String element();
 }
