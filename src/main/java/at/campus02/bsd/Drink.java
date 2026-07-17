@@ -1,3 +1,5 @@
+package at.campus02.bsd;
+
 /**
  * Abstract base class for concrete drink classes
  */
@@ -5,7 +7,7 @@ public abstract class Drink {
     protected String name;
 
     /**
-     * Creates a Drink object with given name
+     * Creates a at.campus02.bsd.Drink object with given name
      *
      * @param name name of the drink
      */

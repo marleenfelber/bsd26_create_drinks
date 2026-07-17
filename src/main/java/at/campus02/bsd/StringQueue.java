@@ -1,16 +1,18 @@
+package at.campus02.bsd;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
- * Implementation of the IQueue Interface that represents a queue that stores String Objects
+ * Implementation of the at.campus02.bsd.IQueue Interface that represents a queue that stores String Objects
  */
 public class StringQueue implements IQueue {
     private List<String> elements = new ArrayList<String>();
     private int maxSize = 5;
 
     /**
-     * Constructor of a StringQueue witht the maximum size
+     * Constructor of a at.campus02.bsd.StringQueue witht the maximum size
      *
      * @param size amount of Strings that can be inside of the queue
      */

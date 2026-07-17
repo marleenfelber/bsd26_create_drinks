@@ -1,5 +1,7 @@
+package at.campus02.bsd;
+
 /**
- * Class that creates a new Liquid with a name,
+ * Class that creates a new at.campus02.bsd.Liquid with a name,
  * the volume in litres and the alcohol percentage
  */
 public class Liquid {
