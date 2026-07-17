@@ -16,9 +16,9 @@ Das Programm wurde von Marleen Felber und Michaela Hofer _im Rahmen des Studiums
 - [x] Projektstruktur anlegen
 - [x] Repository erstellen
 - [x] README erstellen
-- [ ] Branch maven_detail erstellen
-- [ ] Informationen hinzufügen
-- [ ] Abhängigkeiten hinzufügen
+- [x] Branch maven_detail erstellen
+- [x] Informationen hinzufügen
+- [x] Abhängigkeiten hinzufügen
 - [ ] Branch bug_hunt erstellen
 - [ ] Fehler korrigieren
 - [ ] Branch drink erstellen
