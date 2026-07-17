@@ -1,3 +1,5 @@
+package at.campus02.bsd;
+
 /**
  * Interface that represents a queue that stores String Objects
  */

@@ -2,11 +2,10 @@ package at.campus02.bsd;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.NoSuchElementException;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringQueueTest {
-
     private StringQueue q;
 
     @BeforeEach

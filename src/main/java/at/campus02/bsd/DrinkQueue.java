@@ -1,9 +1,11 @@
+package at.campus02.bsd;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
- * Class that represents a queue that stores Drink Objects
+ * Class that represents a queue that stores at.campus02.bsd.Drink Objects
  */
 public class DrinkQueue {
     private List<Drink> elements = new ArrayList<Drink>();
@@ -13,13 +15,12 @@ public class DrinkQueue {
         maxSize = size;
     }
 
-
     /**
      * returns the first drink without deleting it
      *
      * @return first drink of the queue, null if no drink exist
      */
-    public Drink peek()git {
+    public Drink peek() {
         Drink element;
 
         if (elements.size() > 0) {
@@ -32,13 +33,13 @@ public class DrinkQueue {
     }
 
     /**
-     * adds a new Drink to the end of the queue
+     * adds a new at.campus02.bsd.Drink to the end of the queue
      *
      * @param obj the new drink that should be included in the queue
      * @return true if the drink was successfully added, false if not
      */
     public boolean offer(Drink obj) {
-        if (elements.size() != maxSize) {
+        if (elements.size() < maxSize) {
             elements.add(obj);
         } else {
             return false;
@@ -56,9 +57,7 @@ public class DrinkQueue {
         Drink element = peek();
 
         if (elements.size() > 0) {
-            element = elements.get(0);
-        } else {
-            element = null;
+            elements.remove(0);
         }
 
         return element;
@@ -87,8 +86,7 @@ public class DrinkQueue {
      * @throws NoSuchElementException if the queue is empty
      */
     public Drink remove() {
-        // Drink element = poll();
-        element = "";
+        Drink element = poll();
 
         if (element == null) {
             throw new NoSuchElementException("There's no element anymore.");

@@ -2,6 +2,7 @@ package at.campus02.bsd;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.NoSuchElementException;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DrinkQueueTest {
@@ -58,7 +59,7 @@ public class DrinkQueueTest {
     @Test
     public void elementZeroElements() {
         DrinkQueue q = new DrinkQueue(1);
-        assertThrows(java.util.NoSuchElementException.class, () -> q.element());
+        assertThrows(NoSuchElementException.class, () -> q.element());
     }
 
     @Test
@@ -72,7 +73,7 @@ public class DrinkQueueTest {
     @Test
     public void removeZeroElements() {
         DrinkQueue q = new DrinkQueue(1);
-        assertThrows(java.util.NoSuchElementException.class, () -> q.remove());
+        assertThrows(NoSuchElementException.class, () -> q.remove());
     }
 
     @Test

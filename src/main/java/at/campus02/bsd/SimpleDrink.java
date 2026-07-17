@@ -1,3 +1,5 @@
+package at.campus02.bsd;
+
 /**
  * Class represents a simple drink liquid which can be used in
  * drinks
@@ -6,7 +8,7 @@ public class SimpleDrink extends Drink {
     protected Liquid l;
 
     /**
-     * Creates a SimpleDrink object with given age and
+     * Creates a at.campus02.bsd.SimpleDrink object with given age and
      * liquid
      *
      * @param name name of drink

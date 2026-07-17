@@ -1,24 +1,46 @@
 package at.campus02.bsd;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DrinkTest {
 
-    private Drink makeDrink(String name) {
-        return new SimpleDrink(name, new Liquid(name, 0.5, 0));
+    class sampleDrink extends Drink {
+
+        public sampleDrink(String name) {
+            super(name);
+        }
+
+        @Override
+        public double getVolume() {
+            return 0.5;
+        }
+
+        @Override
+        public double getAlcoholPercent() {
+            return 12.0;
+        }
+
+        @Override
+        public boolean isAlcoholic() {
+            return true;
+        }
     }
 
     @Test
-    public void getNameReturnsName() {
-        Drink d = makeDrink("Cola");
-        assertEquals("Cola", d.getName());
+    void testGetName() {
+        Drink drink = new sampleDrink("Wine");
+        assertEquals("Wine", drink.getName());
     }
 
     @Test
-    public void setNameChangesName() {
-        Drink d = makeDrink("Cola");
-        d.setName("Fanta");
-        assertEquals("Fanta", d.getName());
+    void testSetName() {
+        Drink drink = new sampleDrink("Beer");
+
+        drink.setName("Wine");
+
+        assertEquals("Wine", drink.getName());
     }
+
 }
