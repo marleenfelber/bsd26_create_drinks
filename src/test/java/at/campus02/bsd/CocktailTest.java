@@ -15,5 +15,6 @@ public class CocktailTest {
         Cocktail cocktail = new Cocktail("Caipirinha", liquids);
 
         assertNotNull(cocktail);
+
     }
 }

@@ -13,12 +13,10 @@
 	</skin>
 
 	<body>
-
-		<menu name="Overview">
-			<item name="Introduction" href="index.html" />
-			<item name="Test" href="test.html" />
-			<item name="Drinks" href="drinks.html" />
-		</menu>
+        <menu name="Teammitglieder">
+            <item name="Marleen Felber" href="member1.html"/>
+            <item name="Michaela Hofer" href="member2.html"/>
+        </menu>
 		<menu ref="reports" />
 	</body>
 </site>

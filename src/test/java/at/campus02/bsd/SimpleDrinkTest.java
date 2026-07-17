@@ -37,10 +37,16 @@ public class SimpleDrinkTest {
         assertEquals(12.5, aperolSpritz.getAlcoholPercent());
     }
 
-    @DisplayName("Testing isAlcoholic()")
+    @DisplayName("Testing isAlcoholic() with an alcoholic drink")
     @Test
-    void testIsAlcoholic() {
+    void testIsAlcoholic1() {
         assertEquals(true, aperolSpritz.isAlcoholic());
+    }
+
+    @DisplayName("Testing isAlcoholic() with a non-alcoholic drink")
+    @Test
+    void testIsAlcoholic2() {
+        assertEquals(false, sodaZitron.isAlcoholic());
     }
 
 }
